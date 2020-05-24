@@ -1,22 +1,12 @@
-# untitled1
+# Clojure-Parallelized-Text-Analysis
+Text analysis program written in clojure using parallel programming.
 
-A Clojure library designed to ... well, that part is up to you.
+Given a text file, this program does the following:
+- Creates a probability distribution for single characters, pairs of characters, and triplets of characters in the file.
+- Calculates the total "information" in the file given by the following formula:
+    H(S)=∑(nc)(−pc)lg(pc)
+  where pc is the probability of each character (item) in a data stream, nc is
+  the number of times each character c occurs, and the summation is over all characters in the stream.
+- Implements parallel programming, allowing the program to be run concurrently using a user defined number of cores
 
-## Usage
 
-FIXME
-
-## License
-
-Copyright © 2020 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
